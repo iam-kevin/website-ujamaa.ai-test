@@ -1,8 +1,6 @@
-/**
- * ----------------------------
+/* ----------------------------
     NAVIGATION SECTION
- * -----------------------------
- */
+ * --------------------------- */
 nav.header {
     padding: 36px;
     margin: 0 auto;
@@ -38,11 +36,9 @@ nav.header .nav-items a {
     text-decoration: none;
     color: #252021;
 }
-/**
- * ----------------------------
+/* ----------------------------
     MAIN HEADER SECTION
- * -----------------------------
- */
+   ---------------------------- */
 section.header {
     padding: 20px 150px;
     /* Need for the absolute spacing */
