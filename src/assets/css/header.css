@@ -1,0 +1,87 @@
+/**
+ * ----------------------------
+    NAVIGATION SECTION
+ * -----------------------------
+ */
+nav.header {
+    padding: 36px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+nav.header .buttons {
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav.header .buttons > button {
+    margin: 0 6px
+}
+nav.header > img {
+    display: inline;
+}
+
+nav.header .nav-items {
+    list-style-type: none;
+    display: inline;
+}
+
+nav.header .nav-items > li {
+    display: inline-flex;
+    padding: 0 20px
+}
+
+nav.header .nav-items a {
+    text-decoration: none;
+    color: #252021;
+}
+/**
+ * ----------------------------
+    MAIN HEADER SECTION
+ * -----------------------------
+ */
+section.header {
+    padding: 20px 150px;
+    /* Need for the absolute spacing */
+    position: relative;
+    z-index: 3;
+}
+
+section.header .input-section {
+    margin: 0 auto;
+    padding:4em 0;
+}
+
+section.header div.input-fields {
+    display: inline;
+    padding: 0px;
+    margin: 0px;
+}
+
+section.header div.input-fields ul{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+div.input-fields ul > li {
+    display: inline-flex;
+    padding: 0;
+    padding-right: 10px;
+    margin: 0px;
+}
+
+/**  Setting the relative spacing */
+.back-image {
+    position: absolute;
+    top: 0;
+    right: 250px;
+    z-index: -3;
+}
