@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@material-ui/core'
-import theme from './config/theme'
+import theme, { GlobalCss } from './config/theme'
 
 
 import HeaderSection from './fragments/HeaderSection'
@@ -16,6 +16,7 @@ import FooterSection from './fragments/FooterSection'
 function App() {
   return (
         <ThemeProvider theme={theme}>
+            <GlobalCss />
             <CssBaseline />
             <div className='app'>
               <HeaderSection />

@@ -18,7 +18,7 @@ function FooterBase () {
                 </div>
                 <div className='right'> 
                     <ul className='policies'>
-                        <li>Terms &amp; Condition</li>
+                        <li>Terms &amp; Conditions</li>
                         <li>Cookie Policy</li>
                         <li>Privacy Policy</li>
                     </ul>
@@ -38,7 +38,7 @@ function SignUpForOurNewsLetter () {
                     variant="filled" />
                 <Button
                     variant='outlined'
-                    color='default'>
+                    color='secondary'>
                         Subscribe
                 </Button>
             </div>
@@ -76,7 +76,7 @@ function NavigationLists() {
 }
 export default () => {
     return (
-        <Container className='footer'>
+        <Container className='footer' maxWidth={false}>
             <footer>
                 <Grid container spacing={3} className='footer-main'>
                     <Grid item xs={6}>

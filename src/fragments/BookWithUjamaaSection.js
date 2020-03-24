@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid } from '@material-ui/core'
+import { Container, Grid, makeStyles } from '@material-ui/core'
 
 // Import Icons
 import StepOneIcon from '../assets/vectors/stepOne.svg'
@@ -10,24 +10,44 @@ import StepFourIcon from '../assets/vectors/stepFour.svg'
 // Import css
 import '../assets/css/book-section.css'
 
+// custom colors
+import { Colors } from '../config/style'
+
 const GRID_FULL_SIZE = 12
+
+const useStyles = makeStyles( theme => ({
+    root: {
+        "& .title": {
+            fontSize: 28,       
+            color: Colors.main.DARK,
+            padding: 0
+        } 
+    },
+    title: {
+        fontSize: 36,
+        color: "#000"
+    }
+}));
+
 
 function StepGridCell({number, count, stepIcon, stepInformation }) {
     const size = (GRID_FULL_SIZE / count) >> 0;
     return (
-        <Grid item xs={size}>
+        <Grid item md={size} sm={6} xs={12}>
             {stepIcon()}
-            <h3>Step {number}</h3>
+            <h3 class='title'>Step {number}</h3>
             <p>{stepInformation}</p>
         </Grid>
     )
 }
 
-export default () => {
+export default () => {    
+    const classes = useStyles()
+
     return (
-        <Container style={{ background: "#FFF" }} className="book-section">
-            <h2 className='title'>How to book with UJAMAA.AI</h2>
-            <Grid container>
+        <Container style={{ background: "#FFF" }} className="book-section" maxWidth={false}>
+            <h2 className={classes.title} >How to book with UJAMAA.AI</h2>
+            <Grid container className={classes.root}>
                 <StepGridCell
                     number={1}
                     count={4}

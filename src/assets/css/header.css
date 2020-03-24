@@ -40,7 +40,7 @@ nav.header .nav-items a {
     MAIN HEADER SECTION
    ---------------------------- */
 section.header {
-    padding: 20px 150px;
+    padding: 40px 150px;
     /* Need for the absolute spacing */
     position: relative;
     z-index: 3;
@@ -78,6 +78,6 @@ div.input-fields ul > li {
 .back-image {
     position: absolute;
     top: 0;
-    right: 250px;
+    right: 550px;
     z-index: -3;
 }

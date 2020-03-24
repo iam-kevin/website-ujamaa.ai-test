@@ -1,3 +1,10 @@
+.title {
+    color: #252021; /* TODO: you might want to present this 
+                        color somewhere else to improve customizability */
+    margin: 0;
+    font-size: 20px;
+}
+
 .footer > * {
     padding: 0;
     margin: 0 auto;
@@ -92,6 +99,17 @@ footer .footer-main {
 }
 
 .signup-newsletter .title {
-    padding: 10px 0;
+    padding-bottom: 20px;
     font-weight: bold;    
+}
+
+.signup-newsletter .form-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.signup-newsletter .form-controls > * {
+    margin-right: 20px;
 }

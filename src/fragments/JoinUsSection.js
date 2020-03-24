@@ -7,7 +7,7 @@ import ArrowSVG from '../assets/vectors/joinUsArrow.svg'
 import '../assets/css/join-us.css'
 export default () => {
     return (
-        <Container style={{ background: "#DFE2E6" }} className='container'>
+        <Container style={{ background: "#DFE2E6" }} className='container' maxWidth={false}>
             <div className="join-us">
                 <div className='join-info'>
                     <h2 className='title'>Join Our Medical Professional Network Today</h2>
@@ -20,8 +20,8 @@ export default () => {
                     <TextField 
                         variant='filled'
                         label='Phone number' />
-                    <Button variant='contained'>
-                        Join us
+                    <Button variant='contained' color='secondary'>
+                        Join us 
                     </Button>
                 </div>
             </div>

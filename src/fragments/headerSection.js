@@ -29,11 +29,22 @@ const useStyles = makeStyles(theme => ({
     },
     formControl: {
       margin: theme.spacing(0),
-      minWidth: 120,
+      minWidth: 268,
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
+    headerInfo: {
+        maxWidth: 460,
+        "& .large-title": {
+            fontSize: 56,
+            lineHeight: theme.spacing(0.15),
+            margin: theme.spacing(0)
+        },
+        "& p": {
+            fontSize: 20,
+        }
+    }
 }));
 
 /**
@@ -62,10 +73,10 @@ function Header () {
             {/* TODO: Change the default color scheme to: #252021, and other things, like border radius...; Same goes for the `outlined` variant */}
             <div className='right'>
                 <div className='buttons'>
-                    <Button variant='outlined'>
+                    <Button variant='outlined' color='secondary'>
                         Log in
                     </Button>
-                    <Button variant='contained'>
+                    <Button variant='contained' color='secondary'>
                         Sign up
                     </Button>
                 </div>
@@ -74,16 +85,19 @@ function Header () {
     )
 }
 
+
+
 /**
  * 
  * @param {title, subtitle} props Properties for the Header section 
  */
 function HeaderInfo({ title, subtitle }) {
+    const classes = useStyles()
     return (
-        <Typography>
-            <h1>{title}</h1>
-            <p className='subtitle'>{subtitle}</p>
-        </Typography>
+        <Container style={{ padding: 0, margin: 0}} className={classes.headerInfo}>
+            <h1 className='large-title'>{title}</h1>
+            <p>{subtitle}</p>
+        </Container>
     )
 }
 
@@ -105,7 +119,7 @@ function BackHeaderImage() {
  * Customized InputField for the location entry. Uses
  * Material Design Components
  */
-function LocationInputField () {
+function LocationInputField ({ label }) {
     const classes = useStyles()
 
     return (
@@ -115,7 +129,7 @@ function LocationInputField () {
               <LocationOnOutlined />
             </Grid>
             <Grid item>
-              <TextField id="input-with-icon-grid" label="With a grid" />
+              <TextField id="input-with-icon-grid" label={label} />
             </Grid>
           </Grid>
         </div>
@@ -134,52 +148,53 @@ function InputFields () {
     }
 
     return (
-        <div className='input-fields'>
-            <ul>
-                <li>
-                    <FormControl variant="filled" className={classes.formControl}>
-                        <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-filled-label"
-                            id="demo-simple-select-filled"
-                            value={age}
-                            onChange={handleChange}
-                            >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                    </FormControl>
-                </li>
-                <li>
-                    <LocationInputField />
-                </li>
-                <li>
-                    <TextField 
-                        id="filled-basic" 
-                        label="Type a name (optional)" 
-                        variant="filled" />
-                </li>
-                <li>
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.button}
-                        startIcon={<Search />}>
-                            Find a doctor
-                    </Button>
-                </li>
-            </ul>
-        </div>
+        <Grid container
+            justify
+        >
+            <Grid item xs={12} sm={6} lg={3}>
+                <FormControl variant="filled" className={classes.formControl}>
+                    <InputLabel id="demo-simple-select-filled-label">Choose a speciality</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-filled-label"
+                        id="demo-simple-select-filled"
+                        value={age}
+                        onChange={handleChange}
+                        >
+                    <MenuItem value="">
+                        <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6} lg={3}>
+                <LocationInputField
+                    label="Location"/>
+            </Grid>
+            <Grid item xs={12} sm={6} lg={3}>
+                <TextField 
+                    id="filled-basic" 
+                    label="Type a name (optional)" 
+                    variant="filled" />
+            </Grid>
+            <Grid item xs={12} sm={6} lg={3}>
+                <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.button}
+                    startIcon={<Search />}>
+                        Find a doctor
+                </Button>
+            </Grid>
+        </Grid>
     )
 }
 export default () => {
     return (
         <>
-            <Container style={{ backgroundColor: '#F3EEEB', height: 662, padding: 0}}>
+            <Container style={{ backgroundColor: '#F3EEEB', padding: 0}} maxWidth={false}>
                 <Header />
                 <section className='header'>
                     <HeaderInfo
