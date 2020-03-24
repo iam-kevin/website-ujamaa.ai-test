@@ -8,6 +8,11 @@ following are what I have considered to be my estimates on how things will be pl
 
 Estimate scoped time: **48 hours**
 
+## Things to know before you start
+
+Make sure that you have been connected to the internet since some assets (like `fonts`) use the CDN service.
+Check out [Google Fonts](https://fonts.google.com)
+
 ## Getting started
 
 This project is build upon `react-js` which is initiated using the `create-react-app` script.
