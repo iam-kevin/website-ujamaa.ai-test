@@ -53,10 +53,10 @@ function Header () {
             <div className='left'>
                 <img src={Logo} width={128} height={20.08} className='header-image' alt='ujamaa.ai Logo' />
                 <ul className='nav-items'>
-                    <li><a href="#">Book an appointment</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#book-appointment">Book an appointment</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#about-us">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             {/* TODO: Change the default color scheme to: #252021, and other things, like border radius...; Same goes for the `outlined` variant */}
