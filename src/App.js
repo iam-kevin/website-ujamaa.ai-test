@@ -1,9 +1,10 @@
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@material-ui/core'
-import Container from '@material-ui/core/Container'
 import theme from './config/theme'
 
-import HeaderSection from './fragments/headerSection'
+
+// import HeaderSection from './fragments/HeaderSection'
+import FooterSection from './fragments/FooterSection'
 /**
  * Entire App; To contain the components that make up the website
  * TODO: Theming buttons and fonts
@@ -13,8 +14,8 @@ function App({ children }) {
   return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <div style={{ padding: 0, margin: 0 }}>
-                <HeaderSection />
+            <div className='app'>
+                <FooterSection />
             </div>
         </ThemeProvider>
   )

@@ -179,7 +179,7 @@ function InputFields () {
 export default () => {
     return (
         <>
-            <Container style={{ backgroundColor: '#F3EEEB', height: 662, margin: 0, padding: 0, width: '100%' }}>
+            <Container style={{ backgroundColor: '#F3EEEB', height: 662, margin: 0, padding: 0}}>
                 <Header />
                 <section className='header'>
                     <HeaderInfo

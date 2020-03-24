@@ -1,0 +1,97 @@
+.footer > * {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.footer .line {
+    border: 1px solid #C8C7C7;
+}
+
+.footer {
+    background: #F4F3F3;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer > footer{
+    padding: 0 130px;
+    margin: 0 auto;
+}
+
+footer .footer-main {
+    padding: 4em 0;
+}
+
+.footer-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*********************
+    Footer base
+*********************/
+
+.footer-base {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-base .left, .footer-base .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: initial;
+    padding: 10px 0;
+}
+
+.footer-base ul.policies {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    
+}
+
+.footer-base ul.policies > li{
+    display: inline;
+    padding-left: 1em;
+}
+
+/**********************
+    Navigation Lists 
+***********************/
+.nav-lists {
+    padding: 0;
+}
+
+.nav-list .title {
+    font-weight: bold;
+}
+
+.nav-list > .items {
+    list-style-type: none;
+    display: table;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-list > .items > li {
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+/****************************
+    Signup for Newsletter
+*****************************/
+
+.signup-newsletter {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.signup-newsletter .title {
+    padding: 10px 0;
+    font-weight: bold;    
+}
