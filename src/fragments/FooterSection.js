@@ -33,8 +33,7 @@ function SignUpForOurNewsLetter () {
         <Container className='signup-newsletter'>
             <p className='title'>Sign up for our newsletter</p>
             <div className='form-controls'>
-                <TextField 
-                    id="filled-basic" 
+                <TextField  
                     label="Email" 
                     variant="filled" />
                 <Button

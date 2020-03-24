@@ -3,9 +3,11 @@ import { ThemeProvider, CssBaseline } from '@material-ui/core'
 import theme from './config/theme'
 
 
-// import HeaderSection from './fragments/HeaderSection'
-// import FooterSection from './fragments/FooterSection'
+import HeaderSection from './fragments/HeaderSection'
 import BookWithUjamaaSection from './fragments/BookWithUjamaaSection'
+import JoinUsSection from './fragments/JoinUsSection';
+import FooterSection from './fragments/FooterSection'
+
 /**
  * Entire App; To contain the components that make up the website
  * TODO: Theming buttons and fonts
@@ -16,7 +18,10 @@ function App() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <div className='app'>
+              <HeaderSection />
               <BookWithUjamaaSection />
+              <JoinUsSection />
+              <FooterSection />
             </div>
         </ThemeProvider>
   )

@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+
+    padding: 90px 150px !important; 
+}
+
+.container > * {
+    display: inline-block;
+}
+
+.join-info {
+    max-width: 556px;
+}
+
+.join-info .title {
+    margin: 0px;
+    font-size: 36px;
+}
+
+.join-us .input-fields {
+    display: flex;
+    padding: 28px 0;
+    justify-content: flex-start;
+    align-self: start;
+    align-items: center;
+}
+
+.join-us .input-fields > * {
+    padding-right: 10px !important;
+}
+
+.arrow-image {
+    padding-left: 30px; 
+    display: inline-flexbox;
+    justify-items: center;
+}
