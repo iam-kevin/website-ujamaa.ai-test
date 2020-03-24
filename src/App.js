@@ -1,9 +1,17 @@
 import React from 'react';
+import { ThemeProvider, CssBaseline } from '@material-ui/core'
+import theme from './config/theme'
 
-
-function App() {
+function App({ children }) {
   return (
-    <div>Starting off</div>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {/* {children} */}
+            <div>
+                <h1>Hi there</h1>
+                <p>How are you doing?</p>
+            </div>
+        </ThemeProvider>
   )
 }
 
