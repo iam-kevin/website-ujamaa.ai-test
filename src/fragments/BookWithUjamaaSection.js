@@ -21,7 +21,13 @@ const useStyles = makeStyles( theme => ({
             fontSize: 28,       
             color: Colors.main.DARK,
             padding: 0
-        } 
+        },
+        "& .info": {
+            maxWidth: 268
+        },
+        "& img": {
+            padding: "32px 0"
+        }
     },
     title: {
         fontSize: 36,
@@ -35,8 +41,8 @@ function StepGridCell({number, count, stepIcon, stepInformation }) {
     return (
         <Grid item md={size} sm={6} xs={12}>
             {stepIcon()}
-            <h3 class='title'>Step {number}</h3>
-            <p>{stepInformation}</p>
+            <h3 className='title'>Step {number}</h3>
+            <p className='info'>{stepInformation}</p>
         </Grid>
     )
 }

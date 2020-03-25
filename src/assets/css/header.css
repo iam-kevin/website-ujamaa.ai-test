@@ -40,11 +40,21 @@ nav.header .nav-items a {
     MAIN HEADER SECTION
    ---------------------------- */
 section.header {
-    padding: 40px 150px;
+    padding: 40px 50px;
     /* Need for the absolute spacing */
     position: relative;
     z-index: 3;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
 }
+
+section.header .padding {
+    width: 100px;
+    height: 100%;
+}
+
+/** Input field section in the header **/
 
 section.header .input-section {
     margin: 0 auto;
@@ -52,32 +62,35 @@ section.header .input-section {
 }
 
 section.header div.input-fields {
-    display: inline;
-    padding: 0px;
-    margin: 0px;
-}
-
-section.header div.input-fields ul{
-    list-style-type: none;
-    width: 100%;
     display: flex;
     padding: 0px;
     margin: 0px;
-    justify-content: flex-start;
-    align-items: baseline;
 }
 
-div.input-fields ul > li {
-    display: inline-flex;
+section.header div.input-fields > * {
     padding: 0;
-    padding-right: 10px;
-    margin: 0px;
+    margin: 0;
+    padding-right: 20px; 
 }
 
 /**  Setting the relative spacing */
 .back-image {
     position: absolute;
     top: 0;
-    right: 550px;
+    right: 0;
     z-index: -3;
+}
+
+/** Sample responsiveness **/
+@media(min-width: 700px) {
+    section.header {
+        padding: 40px 150px;
+    }
+
+    .back-image {
+        position: absolute;
+        top: 0;
+        right: 550px;
+        z-index: -3;
+    }
 }

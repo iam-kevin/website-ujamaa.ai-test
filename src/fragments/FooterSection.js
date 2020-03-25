@@ -54,10 +54,10 @@ function NavigationLists() {
                 <div className='nav-list'>
                     <span className='title'>Company</span>
                     <ul className='items'>
-                        <li>Book an appointment</li>
-                        <li>FAQs</li>
-                        <li>About us</li>
-                        <li>Contact</li>
+                        <li><a href="#book-appointment">Book an appointment</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </Grid>
@@ -65,9 +65,9 @@ function NavigationLists() {
                 <div className='nav-list'>
                     <span className='title'>Get in touch</span>
                     <ul className='items'>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#twitter">Twitter</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
                     </ul>
                 </div>
             </Grid>

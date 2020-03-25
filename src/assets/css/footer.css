@@ -77,6 +77,11 @@ footer .footer-main {
     font-weight: bold;
 }
 
+.nav-list .items a {
+    text-decoration: none;
+    color: #252021;
+}
+
 .nav-list > .items {
     list-style-type: none;
     display: table;

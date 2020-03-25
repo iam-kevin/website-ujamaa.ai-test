@@ -15,12 +15,14 @@ import Select from '@material-ui/core/Select';
 
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box'
 
 import { Search, LocationOnOutlined } from '@material-ui/icons'
 
 import Logo from '../assets/vectors/ujamaaLogo.svg'
 import HeaderImage from '../assets/vectors/homeImageFrame.svg'
 import '../assets/css/header.css'
+import IconedTextField from '../components/inputfields/IconedTextField';
 
 
 const useStyles = makeStyles(theme => ({
@@ -30,6 +32,10 @@ const useStyles = makeStyles(theme => ({
     formControl: {
       margin: theme.spacing(0),
       minWidth: 268,
+
+      "& .MuiSelect-selectMenu": {
+          height: theme.overrides.MuiInputBase.input.height
+      }
     },
     selectEmpty: {
       marginTop: theme.spacing(2),
@@ -46,6 +52,7 @@ const useStyles = makeStyles(theme => ({
         }
     }
 }));
+
 
 /**
  * This is the Navigation component in the Header Section of the page
@@ -116,27 +123,6 @@ function BackHeaderImage() {
 }
 
 /**
- * Customized InputField for the location entry. Uses
- * Material Design Components
- */
-function LocationInputField ({ label }) {
-    const classes = useStyles()
-
-    return (
-        <div className={classes.margin}>
-          <Grid container spacing={1} alignItems="flex-end">
-            <Grid item>
-              <LocationOnOutlined />
-            </Grid>
-            <Grid item>
-              <TextField id="input-with-icon-grid" label={label} />
-            </Grid>
-          </Grid>
-        </div>
-        )
-}
-
-/**
  * Multi varying InputFields for the site
  */
 function InputFields () {
@@ -148,10 +134,8 @@ function InputFields () {
     }
 
     return (
-        <Grid container
-            justify
-        >
-            <Grid item xs={12} sm={6} lg={3}>
+        <div className='input-fields'>
+            <div>                
                 <FormControl variant="filled" className={classes.formControl}>
                     <InputLabel id="demo-simple-select-filled-label">Choose a speciality</InputLabel>
                     <Select
@@ -160,26 +144,25 @@ function InputFields () {
                         value={age}
                         onChange={handleChange}
                         >
-                    <MenuItem value="">
-                        <em>None</em>
+                    <MenuItem value="pr-care-phys">
+                        <em>Primary care physician</em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Support Nurse</MenuItem>
                     </Select>
                 </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
-                <LocationInputField
+            </div>
+            <div>
+                <IconedTextField
+                    iconComponent={ () => <LocationOnOutlined />}
                     label="Location"/>
-            </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            </div>
+            <div>
                 <TextField 
                     id="filled-basic" 
                     label="Type a name (optional)" 
                     variant="filled" />
-            </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            </div>
+            <div>
                 <Button
                     variant="contained"
                     color="primary"
@@ -187,8 +170,8 @@ function InputFields () {
                     startIcon={<Search />}>
                         Find a doctor
                 </Button>
-            </Grid>
-        </Grid>
+            </div>
+        </div>
     )
 }
 export default () => {
@@ -197,14 +180,14 @@ export default () => {
             <Container style={{ backgroundColor: '#F3EEEB', padding: 0}} maxWidth={false}>
                 <Header />
                 <section className='header'>
-                    <HeaderInfo
-                        title="Making Healthcare Easier"
-                        subtitle="Ujamaa helps you save time, save money, and avoid the hassle." />
-                    <div className='input-section'>
-                        <p className='subtitle'><b>Find a Doctor or Dentist</b></p>
-                        <InputFields />
-                    </div>
-                    <BackHeaderImage />
+                        <HeaderInfo
+                            title="Making Healthcare Easier"
+                            subtitle="Ujamaa helps you save time, save money, and avoid the hassle." />
+                        <div className='input-section'>
+                            <p className='subtitle'><b>Find a Doctor or Dentist</b></p>
+                            <InputFields />
+                        </div>
+                        <BackHeaderImage />
                 </section>
             </Container>
         </>
