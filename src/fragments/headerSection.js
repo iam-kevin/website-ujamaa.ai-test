@@ -145,7 +145,7 @@ function InputFields () {
                         onChange={handleChange}
                         >
                     <MenuItem value="pr-care-phys">
-                        <em>Primary care physician</em>
+                        Primary care physician
                     </MenuItem>
                     <MenuItem value={10}>Support Nurse</MenuItem>
                     </Select>
