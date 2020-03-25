@@ -1,23 +1,24 @@
-## Project information
+## Ujamaa.ai `completed`
 
-Below, lies the information on creating the demo site as demonstrated in 
-this [link](https://www.figma.com/file/ULO7triZT4KKl4IuFzSw1p/Ujamaa?node-id=36%3A0).
+Tasked to recreate the site as shown in this [Figma Composite](https://www.figma.com/file/ULO7triZT4KKl4IuFzSw1p/Ujamaa?node-id=36%3A0).
 
-Given that the project is reproduced from scratch from the template provided in the link above, the 
-following are what I have considered to be my estimates on how things will be played out in the project.
+I was bound only use:
+    - [`material-ui`](https://material-ui.com/) library
+    - or `raw` HTML / CSS
 
-Estimate scoped time: **48 hours**
+For this project, I have used both to a certain degree.
 
-## Things to know before you start
-
-Make sure that you have been connected to the internet since some assets (like `fonts`) use the CDN service.
+NOTE: Make sure that you have been connected to the internet, since I use Google Fonts API.
 Check out [Google Fonts](https://fonts.google.com)
+
+## Comments
+
+Constructive critism are highly welcome
 
 ## Getting started
 
 This project is build upon `react-js` which is initiated using the `create-react-app` script.
-
-Scripts are available to make it easy to build and run the site on the computer
+Scripts are available to make it easy to build and run the site on the computer. <br />
 
 After cloning / downloading the project, install the project dependencies with:
 
